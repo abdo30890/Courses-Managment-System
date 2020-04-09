@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using CMS.Web.Areas.Admin.Models;
 
 namespace CMS.Web.Models.ConnectionTools
 {
@@ -23,6 +24,7 @@ namespace CMS.Web.Models.ConnectionTools
         public DbSet<Lesson> Lessons { get; set; }
         public DbSet<Member> Members { get; set; }
         public DbSet<Trainer> Trainers { get; set; }
+        public DbSet<Login> Logins { get; set; }
 
         #endregion
 

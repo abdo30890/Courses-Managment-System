@@ -177,8 +177,10 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AccountController.cs" />
     <Compile Include="Areas\Admin\Controllers\CourseController.cs" />
     <Compile Include="Areas\Admin\Controllers\DefaultController.cs" />
+    <Compile Include="Areas\Admin\Models\Login.cs" />
     <Compile Include="Areas\Instructor\InstructorAreaRegistration.cs" />
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
@@ -190,16 +192,21 @@
     <Compile Include="Migrations\202004051350531_CmsDbCreation.designer.cs">
       <DependentUpon>202004051350531_CmsDbCreation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004091918309_LoginMigration.cs" />
+    <Compile Include="Migrations\202004091918309_LoginMigration.designer.cs">
+      <DependentUpon>202004091918309_LoginMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Category.cs" />
-    <Compile Include="Models\ConnectionTools\CMSContext.cs" />
+    <Compile Include="Models\ConnectionTools\CmsContext.cs" />
     <Compile Include="Models\ConnectionTools\ConnectionString.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Lesson.cs" />
     <Compile Include="Models\Member.cs" />
     <Compile Include="Models\Trainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AdminService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -215,6 +222,8 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Areas\Admin\Views\Account\Login.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_OfflineLayout.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -297,7 +306,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Instructor\Controllers\" />
     <Folder Include="Areas\Instructor\Models\" />
     <Folder Include="Areas\Instructor\Views\Shared\" />
@@ -305,6 +313,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202004051350531_CmsDbCreation.resx">
       <DependentUpon>202004051350531_CmsDbCreation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004091918309_LoginMigration.resx">
+      <DependentUpon>202004091918309_LoginMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
