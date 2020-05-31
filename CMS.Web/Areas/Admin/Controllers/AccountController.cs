@@ -18,7 +18,7 @@ namespace CMS.Web.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public ActionResult Login(Login loginInfo)
+        public ActionResult Login(LoginModel loginInfo)
         {
             var adminService = new AdminService();
             var  isLoggedIn = adminService.login(loginInfo.Email, loginInfo.Password);

@@ -7,13 +7,13 @@ namespace CMS.Web.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.0")]
-    public sealed partial class LoginMigration : IMigrationMetadata
+    public sealed partial class initial : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(LoginMigration));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(initial));
         
         string IMigrationMetadata.Id
         {
-            get { return "202004091918309_LoginMigration"; }
+            get { return "202004301512335_initial"; }
         }
         
         string IMigrationMetadata.Source

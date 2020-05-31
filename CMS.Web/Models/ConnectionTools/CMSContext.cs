@@ -24,7 +24,7 @@ namespace CMS.Web.Models.ConnectionTools
         public DbSet<Lesson> Lessons { get; set; }
         public DbSet<Member> Members { get; set; }
         public DbSet<Trainer> Trainers { get; set; }
-        public DbSet<Login> Logins { get; set; }
+        public DbSet<LoginModel> Logins { get; set; }
 
         #endregion
 

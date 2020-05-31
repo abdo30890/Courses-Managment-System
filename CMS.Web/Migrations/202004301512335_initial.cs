@@ -1,8 +1,9 @@
 ﻿namespace CMS.Web.Migrations
 {
+    using System;
     using System.Data.Entity.Migrations;
     
-    public partial class LoginMigration : DbMigration
+    public partial class initial : DbMigration
     {
         public override void Up()
         {
@@ -24,13 +25,13 @@
             DropPrimaryKey("dbo.Trainers");
             DropPrimaryKey("dbo.CoursesLessons");
             CreateTable(
-                "dbo.Logins",
+                "dbo.LoginModels",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Email = c.String(nullable: false),
                         Password = c.String(nullable: false),
-                        Massage = c.String()
+                        Massage = c.String(),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -110,7 +111,7 @@
             DropColumn("dbo.Members", "MemberName");
             DropColumn("dbo.Courses", "CourseName");
             DropColumn("dbo.Categories", "CategoryName");
-            DropTable("dbo.Logins");
+            DropTable("dbo.LoginModels");
             AddPrimaryKey("dbo.CoursesLessons", new[] { "RefCourseId", "RefLessonId" });
             AddPrimaryKey("dbo.Trainers", "Id");
             AddPrimaryKey("dbo.Members", "Id");

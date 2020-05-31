@@ -180,7 +180,7 @@
     <Compile Include="Areas\Admin\Controllers\AccountController.cs" />
     <Compile Include="Areas\Admin\Controllers\CourseController.cs" />
     <Compile Include="Areas\Admin\Controllers\DefaultController.cs" />
-    <Compile Include="Areas\Admin\Models\Login.cs" />
+    <Compile Include="Areas\Admin\Models\LoginModel.cs" />
     <Compile Include="Areas\Instructor\InstructorAreaRegistration.cs" />
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
@@ -192,9 +192,9 @@
     <Compile Include="Migrations\202004051350531_CmsDbCreation.designer.cs">
       <DependentUpon>202004051350531_CmsDbCreation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202004091918309_LoginMigration.cs" />
-    <Compile Include="Migrations\202004091918309_LoginMigration.designer.cs">
-      <DependentUpon>202004091918309_LoginMigration.cs</DependentUpon>
+    <Compile Include="Migrations\202004301512335_initial.cs" />
+    <Compile Include="Migrations\202004301512335_initial.designer.cs">
+      <DependentUpon>202004301512335_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
@@ -314,8 +314,8 @@
     <EmbeddedResource Include="Migrations\202004051350531_CmsDbCreation.resx">
       <DependentUpon>202004051350531_CmsDbCreation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004091918309_LoginMigration.resx">
-      <DependentUpon>202004091918309_LoginMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202004301512335_initial.resx">
+      <DependentUpon>202004301512335_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

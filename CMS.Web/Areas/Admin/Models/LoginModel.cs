@@ -6,9 +6,9 @@ using System.Web;
 
 namespace CMS.Web.Areas.Admin.Models
 {
-    public class Login
+    public class LoginModel
     {
-        [Key]
+        
         public int Id { get; set; }
         [EmailAddress]
         [Required]
